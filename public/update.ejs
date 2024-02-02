@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    </table>
+    <form action="/updateData" method="post">
+        <input id="name" type="text" required name="name" placeholder="Name" value = "<%= obj.name %>"><br><br>
+        <input id="surname" type="text" name="surname" placeholder="Surname" value = "<%= obj.surname %>"><br><br>
+        <input id="bithDate" type="date" name="bithDate" placeholder="Bith Date"  value = "<%= obj.bithDate %>"><br><br>
+        <input id="age" type="number" name="age" placeholder="Age"  value = "<%= obj.age %>"><br><br>
+        <input id="horoscope" type="text" required name="horoscope" placeholder="Horoscope" value = "<%= obj.horoscope %>"><br><br>
+        <input id="chineseZodiak" type="text" name="chineseZodiak" placeholder="Chinese Zodiak" value = "<%= obj.chineseZodiak %>"><br><br>
+        <input id="tarot" type="text" name="tarot" placeholder="Tarot"  value = "<%= obj.tarot %>"><br><br>
+        <input type="hidden" name="id" value = "<%= obj._id %>"><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
