@@ -1,3 +1,65 @@
 body{
-    background-color: silver;
+    background-color: #a355cf;
+}
+
+input {
+    width: 210px;
+}
+
+#SubmitBtn{
+    background-color: #e8d4f3;
+    font-weight:bold;
+    margin:auto;
+    width:200px;
+}
+
+.item{
+    float: left;
+    margin: 20px;
+    display:inline-block;
+} 
+
+#tarot {
+    margin-bottom: 20px;
+}
+
+label{
+    font-weight:bold;
+}
+
+#userDiv{
+    background-color:	#ba7fdb;
+    width: 250px;
+    /* height: 350px; */
+    border-color: 	#e8d4f3;
+    border : dashed;
+    margin-bottom: 20px;
+}
+
+#inputSection{
+    text-align: center;
+    background-color:	#ba7fdb;
+    width: 250px;
+    height: 350px;
+    border-color: 	#e8d4f3;
+    border : dashed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    display:block;
+    width: 50px;
+    padding: 5px;
+    background-color:	#e8d4f3;
+    color:#000000;
+    text-decoration:none;
+    font-weight:bold;
+    font: size 5px;;
+    border:thin solid black;
+}   
+
+#buttonDiv {
+    display: flex;
 }

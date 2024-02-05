@@ -3,35 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Users Documents</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <form action="/addName" method="post">
-        <input type="text" name="name" placeholder="Plesae type user name" id="name"><br>
-        <input type="text" name="surname" placeholder="Please type user surname" id="surname"><br>
-        <input type="date" name="birth date" placeholder="Please type your birth date" id="bithDate"><br>
-        <input type="number" name="age" placeholder="Plesae type user age" id="age"><br>
-        <input type="text" name="horoscope" placeholder="Please type user horoscope" id="horoscope"><br>
-        <input type="text" name="chineseZodiak" placeholder="Please type your chineseZodiak" id="chineseZodiak"><br>
-        <input type="text" name="tarot" placeholder="Plesae type user tarot" id="tarot"><br>
+    <div class="main">
+        <div class="item" id="inputSection">
+            <form action="/addName" method="post">
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Plesae type user name" id="name"><br>
+                <label for="surname">Surname</label>
+                <input type="text" name="surname" placeholder="Please type user surname" id="surname"><br>
+                <label for="bithDate">Birth date</label>
+                <input type="date" name="bithDate" placeholder="Please type your birth date" id="bithDate"><br>
+                <label for="age">Age</label><br>
+                <input type="number" name="age" placeholder="Plesae type user age" id="age"><br>
+                <label for="horoscope">Horoscope</label>
+                <input type="text" name="horoscope" placeholder="Please type user horoscope" id="horoscope"><br>
+                <label for="chineseZodiak">Chinese zodiak</label>
+                <input type="text" name="chineseZodiak" placeholder="Please type your chinese zodiak" id="chineseZodiak"><br>
+                <label for="tarot">Tarot</label>
+                <input type="text" name="tarot" placeholder="Plesae type user tarot" id="tarot"><br>
+                
+                <input type="submit" id="SubmitBtn" onclick="SendData()"><br>
+            </form>
+        </div>
 
-        <input type="submit" id="SubmitBtn" onclick="SendData()"><br>
-    </form>
+        <div class="item">
+            <dl>
+                <% obj.forEach(function(justOne) { %>
+                    <div id="userDiv">
 
-    <dl>
-        <% obj.forEach(function(justOne) { %>
-            <dt><%= justOne.name %> <%= justOne.surname %></dt>
-            <dd>- <%= justOne.bithDate %> (<%= justOne.age %>)</dd>
-            <dd>- <%= justOne.horoscope %></dd>
-            <dd>- <%= justOne.chineseZodiak %></dd>
-            <dd>- <%= justOne.tarot %></dd>
+                        <dt><%= justOne.name %> <%= justOne.surname %></dt>
+                        <dd>- <%= justOne.bithDate %> (<%= justOne.age %>)</dd>
+                        <dd>- <%= justOne.horoscope %></dd>
+                        <dd>- <%= justOne.chineseZodiak %></dd>
+                        <dd>- <%= justOne.tarot %></dd>
 
-            <dd><a class="update" href="update/<%= justOne._id %>">Update</a></dd>
-            <dd><a class="delete" href="delete/<%= justOne._id %>">Delete</a></dd>
-        <% }); %>
-    </dl>
+                        <div id="buttonDiv">
+                            <dd><a class="update" href="update/<%= justOne._id %>">Update</a></dd>
+                            <dd><a class="delete" href="delete/<%= justOne._id %>">Delete</a></dd>
+                        </div>
+                        <br>
+                    </div>
+                <% }); %>
+            </dl>
+        </div>
+    </div>
+
 
     <script src="script.js"></script>
 </body>

@@ -3,21 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update user</title>
+    <style>
+        body {
+            margin: 200px;
+            background-color: #a355cf;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        #updateDiv{            
+            text-align: center;
+            background-color:	#ba7fdb;
+            width: 250px;
+            height: 350px;
+            border-color: 	#e8d4f3;
+            border : dashed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            width: 210px;
+        }
+
+        #SubmitBtn{
+            background-color: #e8d4f3;
+            font-weight:bold;
+            margin:auto;
+            width:200px;
+        }
+    </style>
 </head>
 <body>
 
-    </table>
-    <form action="/updateData" method="post">
-        <input id="name" type="text" required name="name" placeholder="Name" value = "<%= obj.name %>"><br><br>
-        <input id="surname" type="text" name="surname" placeholder="Surname" value = "<%= obj.surname %>"><br><br>
-        <input id="bithDate" type="date" name="bithDate" placeholder="Bith Date"  value = "<%= obj.bithDate %>"><br><br>
-        <input id="age" type="number" name="age" placeholder="Age"  value = "<%= obj.age %>"><br><br>
-        <input id="horoscope" type="text" required name="horoscope" placeholder="Horoscope" value = "<%= obj.horoscope %>"><br><br>
-        <input id="chineseZodiak" type="text" name="chineseZodiak" placeholder="Chinese Zodiak" value = "<%= obj.chineseZodiak %>"><br><br>
-        <input id="tarot" type="text" name="tarot" placeholder="Tarot"  value = "<%= obj.tarot %>"><br><br>
-        <input type="hidden" name="id" value = "<%= obj._id %>"><br><br>
-        <input type="submit">
-    </form>
+    <div class="main">
+        <div id="updateDiv">
+            <form action="/updateData" method="post">
+                <label for="name">Name</label>
+                <input id="name" type="text" required name="name" placeholder="Name" value = "<%= obj.name %>"><br>
+                <label for="surname">Surname</label>
+                <input id="surname" type="text" name="surname" placeholder="Surname" value = "<%= obj.surname %>"><br>
+                <label for="bithDate">Birth date</label>
+                <input id="bithDate" type="date" name="bithDate" placeholder="Bith Date"  value = "<%= obj.bithDate %>"><br>
+                <label for="age">Age</label><br>
+                <input id="age" type="number" name="age" placeholder="Age"  value = "<%= obj.age %>"><br>
+                <label for="horoscope">Horoscope</label>
+                <input id="horoscope" type="text" required name="horoscope" placeholder="Horoscope" value = "<%= obj.horoscope %>"><br>
+                <label for="chineseZodiak">Chinese zodiak</label>
+                <input id="chineseZodiak" type="text" name="chineseZodiak" placeholder="Chinese Zodiak" value = "<%= obj.chineseZodiak %>"><br>
+                <label for="tarot">Tarot</label>
+                <input id="tarot" type="text" name="tarot" placeholder="Tarot"  value = "<%= obj.tarot %>"><br>               
+                <input type="hidden" name="id" value = "<%= obj._id %>"><br><br>
+
+                <input type="submit" id="SubmitBtn">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
